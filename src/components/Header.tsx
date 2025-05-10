@@ -54,11 +54,11 @@ export default function Header() {
 
         {/* Social Links */}
         <div className="hidden md:flex items-center space-x-3">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/kasun751" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/kasun-priyadarshana" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/kasun-priyadarshana-866b41146/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </a>

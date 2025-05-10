@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-xl opacity-75"></div>
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-white/10 overflow-hidden relative">
                 <img
-                  src="public/lovable-uploads/8b6c3498-a1cd-458a-a760-b1e5e18cbfba.png"
+                  src="public/profile-pic/my-pic.png"
                   alt="Kasun Priyadarshana"
                   className="object-cover w-full h-full"
                 />

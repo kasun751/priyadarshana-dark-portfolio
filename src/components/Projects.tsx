@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Code, ArrowRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import VrmsPic from "../../public/project-pics/vrms.jpg"
 
 interface Project {
   title: string;
@@ -15,33 +16,33 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Library Management System",
+    title: "Smart Library Management System",
     description: "A comprehensive system for managing library resources, including book tracking, member management, and borrowing functionality.",
     technologies: ["React", "PHP", "MySQL"],
-    githubLink: "https://github.com/kasun/library-management",
+    githubLink: "https://github.com/kasun751/Library_Management_System.git",
     image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2800&auto=format&fit=crop"
   },
   {
-    title: "E-commerce Platform",
-    description: "Full-featured online store with product catalog, shopping cart, user authentication, and payment integration.",
-    technologies: ["React", "Spring Boot", "PostgreSQL"],
-    githubLink: "https://github.com/kasun/ecommerce-platform",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2800&auto=format&fit=crop"
+    title: "Vehicle Rental Management System",
+    description: "Developed a Vehicle Rental Management System using JSP and Servlets to handle vehicle bookings, customer management, and rental tracking. Implemented dynamic web pages and server-side logic for seamless user interactions and data processing.",
+    technologies: ["React", "JSP", "Servlet"],
+    githubLink: "https://github.com/kasun751/Vehicle_Rental_Management_System.git",
+    image: `${VrmsPic}`
   },
   {
-    title: "Task Management Application",
-    description: "Web application for managing tasks, projects, and team collaboration with real-time updates.",
-    technologies: ["TypeScript", "React", "Node.js", "MongoDB"],
-    githubLink: "https://github.com/kasun/task-management",
-    liveLink: "https://task-app-demo.vercel.app",
+    title: "Research Repository Platform using ML model - Current ongoing",
+    description: "Designed and developed a research repository system for Uva Wellassa University using React, Spring Boot, and PostgreSQL. Implemented AI/ML-based semantic search using text embeddings to enhance document retrieval accuracy. Integrated a RESTful backend with a responsive React frontend for seamless user interaction.",
+    technologies: ["Springboot", "Hugging Face", "Python", "Postgre SQL"],
+    githubLink: "#",
+    // liveLink: "https://task-app-demo.vercel.app",
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2800&auto=format&fit=crop"
   },
   {
-    title: "Student Information System",
-    description: "Platform for managing student data, course enrollment, grades, and academic progress tracking.",
-    technologies: ["Django", "Python", "PostgreSQL"],
-    githubLink: "https://github.com/kasun/student-information-system",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2800&auto=format&fit=crop"
+    title: "PDF Digital Signature System - Currently ongoing",
+    description: "Developed a secure PDF digital signing and verification system using Python and Flask. Implemented cryptographic techniques to ensure document integrity and verify signer authenticity, with a React.js frontend for user interaction.",
+    technologies: ["Python", "Flask", "PostgreSQL", "Cryptography"],
+    githubLink: "#",
+    image: "https://media.istockphoto.com/id/2166683688/photo/e-signing-electronic-signature-document-management-paperless-office-concept-businessman-using.webp?a=1&b=1&s=612x612&w=0&k=20&c=KPdyIFG9SK8wjokXj-vZgtbeyt5f1IWURO_kuS7INMA="
   }
 ];
 

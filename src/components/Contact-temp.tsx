@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
@@ -18,24 +19,19 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Create mailto link
-    const subject = `Message from ${name}`;
-    const body = `Hello Kasun,\n\n${message}\n\nBest regards,\n${name}\n${email}`;
-    const mailtoLink = `mailto:kasunp751@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Open default email client
-    window.location.href = mailtoLink;
-    
-    // Show toast and reset form
-    toast({
-      title: "Email client opened!",
-      description: "Please send your message through your email application.",
-    });
-    
-    setName("");
-    setEmail("");
-    setMessage("");
-    setIsSubmitting(false);
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for contacting me. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setName("");
+      setEmail("");
+      setMessage("");
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   return (

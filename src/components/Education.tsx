@@ -36,7 +36,7 @@ export default function Education() {
                 <span className="text-sm text-gray-400">2021 - Present</span>
               </div>
               <p className="mb-4 text-gradient font-medium">B.Sc. in Computer Science and Technology</p>
-              <p className="text-sm text-gray-400">ID: UWU/CST/21/034</p>
+              {/* <p className="text-sm text-gray-400">ID: UWU/CST/21/034</p> */}
               
               <div className="mt-6">
                 <h4 className="text-md font-medium mb-2 text-gray-300">Relevant Coursework:</h4>
