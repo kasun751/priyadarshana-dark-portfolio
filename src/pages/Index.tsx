@@ -1,5 +1,6 @@
 
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -11,7 +12,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <Header />
       <main>
         <Hero />

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,11 +17,23 @@ const navItems: NavItem[] = [
 ];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-background/80 border-b border-white/10">
-      <div className="container flex h-16 items-center justify-between">
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      scrolled ? "backdrop-blur-lg bg-black/80 shadow-md" : "bg-transparent"
+    }`}>
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <h1 className="text-xl font-bold text-gradient">Kasun Priyadarshana</h1>
@@ -33,7 +45,7 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
             >
               {item.name}
             </a>
@@ -42,15 +54,15 @@ export default function Header() {
 
         {/* Social Links */}
         <div className="hidden md:flex items-center space-x-3">
-          <a href="https://github.com" className="text-foreground/80 hover:text-foreground">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/kasun-priyadarshana" className="text-foreground/80 hover:text-foreground">
+          <a href="https://linkedin.com/in/kasun-priyadarshana" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="mailto:kasunp751@gmail.com" className="text-foreground/80 hover:text-foreground">
+          <a href="mailto:kasunp751@gmail.com" className="text-gray-400 hover:text-white transition-colors">
             <Mail className="h-5 w-5" />
             <span className="sr-only">Email</span>
           </a>
@@ -63,6 +75,7 @@ export default function Header() {
             size="icon"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
+            className="text-white"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -70,14 +83,14 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="fixed inset-0 top-16 z-40 bg-background animate-fade-in md:hidden">
-            <div className="container py-8">
+          <div className="fixed inset-0 top-16 z-40 bg-black/95 animate-fade-in md:hidden">
+            <div className="container py-8 px-4">
               <nav className="flex flex-col space-y-6 mb-8">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium text-foreground/80 hover:text-foreground"
+                    className="text-lg font-medium text-gray-300 hover:text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -86,15 +99,15 @@ export default function Header() {
               </nav>
               
               <div className="flex items-center space-x-6">
-                <a href="https://github.com" className="text-foreground/80 hover:text-foreground">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </a>
-                <a href="https://linkedin.com/in/kasun-priyadarshana" className="text-foreground/80 hover:text-foreground">
+                <a href="https://linkedin.com/in/kasun-priyadarshana" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </a>
-                <a href="mailto:kasunp751@gmail.com" className="text-foreground/80 hover:text-foreground">
+                <a href="mailto:kasunp751@gmail.com" className="text-gray-400 hover:text-white transition-colors">
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </a>
