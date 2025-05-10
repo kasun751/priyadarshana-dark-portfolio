@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Code, ArrowRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import VrmsPic from "../../public/project-pics/vrms.jpg"
+import ResearchRepoPic from "../../public/project-pics/researchrepo.jpg"
 
 interface Project {
   title: string;
@@ -35,7 +36,7 @@ const projects: Project[] = [
     technologies: ["Springboot", "Hugging Face", "Python", "Postgre SQL"],
     githubLink: "#",
     // liveLink: "https://task-app-demo.vercel.app",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2800&auto=format&fit=crop"
+    image: `${ResearchRepoPic}`
   },
   {
     title: "PDF Digital Signature System - Currently ongoing",
